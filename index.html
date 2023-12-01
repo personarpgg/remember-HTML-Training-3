@@ -11,21 +11,43 @@
 <body>
   <div id="root"></div>
 
-  <!-- 절때 여기에 코트를 작성하지 않고 시도해볼 것 -->
+  <!-- 여기에 코트를 작성하지 않고 시도해볼 것 -->
 
 
   <script>
+    const body = document.body;
+
+
     const root = document.getElementById("root");//body의 근간이 되는 핵심 코어
+    
+    const area1 = document.createElement("div"); //topArea
+    area1.style.display = "flex";
+    root.appendChild(area1);
+
 
     const div1 = document.createElement("div"); // Area1
-    root.appendChild(div1);
+    div1.style.backgroundColor = "green";
+    div1.style.border = "1px solid black"
+    div1.textContent = "Area1";
+    div1.style.width = "50vw";
+    div1.style.height = "100vh";
+    area1.appendChild(div1); //area1에 종속
+    
+    const div2 = document.createElement("div"); // Area1
+    div2.style.backgroundColor = "yellow";
+    div2.style.border = "1px solid black"
+    div2.textContent = "Area2";
+    area1.appendChild(div2); //area1에 종속
 
-    const div2 = document.createElement("div"); // Area2
-    root.appendChild(div2);
 
+
+    /*
     const div3 = document.createElement("div"); // Area3
+    div3.style.backgroundColor = "green";
+    div3.style.border = "1px solid black"
+    div3  .textContent = "Area3";
     root.appendChild(div3);
-
+    */
 
 
 
