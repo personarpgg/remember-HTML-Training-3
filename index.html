@@ -14,16 +14,18 @@
   <!-- 여기에 코트를 작성하지 않고 시도해볼 것 -->
 
 
-  <script>
+  <script type="module">
     const body = document.body;
-
-
+    body.style.backgroundColor = "black";
     const root = document.getElementById("root");//body의 근간이 되는 핵심 코어
     
-    const area1 = document.createElement("div"); //topArea
+    const area1 = document.createElement("div"); //allArea : 전체 컨테이너
     area1.style.display = "flex";
     root.appendChild(area1);
 
+    const area2 = document.createElement("div"); //rightArea : 오르쪽 컨테이너
+    area2.style.dipslay = "flex";
+    
 
     const div1 = document.createElement("div"); // Area1
     div1.style.backgroundColor = "green";
@@ -37,9 +39,9 @@
     div2.style.backgroundColor = "yellow";
     div2.style.border = "1px solid black"
     div2.textContent = "Area2";
+    div2.style.width = "50vw";
+    div2.style.height = "50vh";
     area1.appendChild(div2); //area1에 종속
-
-
 
     /*
     const div3 = document.createElement("div"); // Area3
