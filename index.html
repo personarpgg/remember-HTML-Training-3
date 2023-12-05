@@ -8,9 +8,10 @@
   <title>Document</title>
 
   <style>
-    a{
+    /* #root{
+      display: flex;
 
-    }
+    } */
 
   </style>
 
@@ -18,7 +19,6 @@
 
 <body>
   <div id="root"></div>
-
   <!-- 여기에 코트를 작성하지 않고 시도해볼 것 -->
 
 
@@ -26,44 +26,76 @@
     const body = document.body;
     body.style.backgroundColor = "black";
     const root = document.getElementById("root");//body의 근간이 되는 핵심 코어
+    root.style.display = "flex";    
+
+
+
+    //----------------------------- Area1--------------------------//
+
+    const Area1 = document.createElement("div"); // Area1
+    Area1.style.backgroundColor = "green";
+    Area1.style.border = "1px solid black"
+    Area1.textContent = "Area1";
+    Area1.style.width = "50vw";
+    Area1.style.height = "100vh";
+    root.appendChild(Area1); //area1에 종속
+
+
+    const Area1Title = document.createElement("h3");
+    Area1Title.style.backgroundColor = "white";
+    Area1Title.style.border = "1px solid black"
+    Area1Title.textContent = "HTML Training 3";
+    Area1Title.style.width = "50vw";
+    Area1Title.style.height = "5vh";
+    Area1.appendChild(Area1Title); //area1에 종속
+
+    const Area1Text = document.createElement("div");
+    Area1Text.style.backgroundColor = "white";
+    Area1Text.style.border = "1px solid black"
+    Area1Text.textContent = `Lorem ipsum dolor sit amet consectetur. Odio quisque et ac egestas aliquet lectus sagittis tortor pellentesque. Fames urna porttitor egestas ornare non pharetra vulputate imperdiet. Massa vulputate ultrices mauris ut amet sit et netus. Non enim aliquam placerat mattis id in mattis. Elementum mauris vestibulum ullamcorper orci penatibus laoreet risus diam. Etiam neque ut est posuere leo tincidunt ridiculus vitae sagittis. Egestas sed lectus tempus purus egestas. Elit maecenas turpis justo feugiat sagittis enim cras lobortis. Imperdiet turpis pellentesque posuere suspendisse. Et risus scelerisque id nulla. Nulla faucibus ut ultricies velit sed maecenas. A mattis neque erat egestas porttitor risus sed. Adipiscing nibh et dolor proin lorem tortor malesuada massa. Velit libero ac proin in orci nibh. Viverra ullamcorper massa nisi urna dignissim netus sed. Non sed ornare semper eu faucibus et odio fames tincidunt. Aenean neque aenean tortor interdum dignissim. Aliquet ornare nulla porttitor libero pretium morbi sagittis scelerisque. Elit arcu diam urna consectetur. Cursus augue volutpat habitasse sed neque vitae id. A amet arcu dignissim ut non gravida ut. Laoreet rhoncus leo odio donec.Auctor vitae porttitor suspendisse lobortis eleifend tristique diam. Malesuada arcu rutrum condimentum commodo vitae donec. Pretium malesuada blandit integer nunc feugiat ligula. Duis at in id urna. Massa in neque montes parturient urna. Id ligula quam ipsum nulla. Velit purus suspendisse arcu scelerisque tellus risus. Sed id lacus sit turpis mi adipiscing. Enim eget nec arcu massa adipiscing elit rhoncus. Quis congue senectus porttitor dui nisl. Ac luctus quam quam lorem. Nunc aliquam ornare dictum nullam vitae dui. Dictum commodo habitant augue gravida consequat quis proin mauris nec. Amet senectus ac sagittis volutpat quisque nec amet. Mi placerat lectus purus neque sit cursus proin. Natoque quam justo sem neque massa integer`;
+    Area1Text.style.width = "50vw";
+    Area1Text.style.height = "60vh";
+    Area1.appendChild(Area1Text); //area1에 종속
+
+
+    const Area1Text2 = document.createElement("div");
+    Area1Text2.style.backgroundColor = "white";
+    Area1Text2.style.border = "1px solid black"
+    Area1Text2.textContent = `
+    Lorem ipsum dolor sit amet consectetur. Odio quisque et ac egestas aliquet lectus sagittis tortor pellentesque. Fames urna porttitor egestas ornare non pharetra vulputate imperdiet. Massa vulputate ultrices mauris ut amet sit et netus. Non enim aliquam placerat mattis id in mattis. Elementum mauris vestibulum ullamcorper orci penatibus laoreet risus diam. Etiam neque ut est posuere leo tincidunt ridiculus vitae sagittis. Egestas sed lectus tempus purus egestas. Elit maecenas turpis justo feugiat sagittis enim cras lobortis. Imperdiet turpis pellentesque posuere suspendisse.
+    Et risus scelerisque id nulla. Nulla faucibus ut ultricies velit sed maecenas. A mattis neque erat egestas porttitor risus sed. Adipiscing nibh et dolor proin lorem tortor malesuada massa. Velit libero ac proin in orci nibh. Viverra ullamcorper massa nisi urna dignissim netus sed. Non sed ornare semper eu faucibus et odio fames tincidunt. Aenean neque aenean tortor interdum
     
-    const area1 = document.createElement("div"); //allArea : 전체 컨테이너
-    area1.style.display = "flex";
-    root.appendChild(area1);
+    `;
+    Area1Text2.style.width = "50vw";
+    Area1Text2.style.height = "5vh";
+    Area1.appendChild(Area1Text2); //area1에 종속
 
-    const div1 = document.createElement("div"); // Area1
-    div1.style.backgroundColor = "green";
-    div1.style.border = "1px solid black"
-    div1.textContent = "Area1";
-    div1.style.width = "50vw";
-    div1.style.height = "100vh";
-    area1.appendChild(div1); //area1에 종속
+    //----------------------------- Area1--------------------------//
+
+    const Area2 = document.createElement("div"); 
+    Area2.style.backgroundColor = "blue";
+    Area2.style.border = "1px solid black"
+    Area2.textContent = "Area2";
+    Area2.style.width = "50vw";
+    Area2.style.height = "100vh";
+    root.appendChild(Area2); //area1에 종속
     
-    const area2 = document.createElement("div"); //rightArea : 오르쪽 컨테이너
-    area2.style.dipslay = "flex";
-    // area2.flexDirection = "column";
+    const Area2Div1 = document.createElement("div");
+    Area2Div1.style.backgroundColor = "gray";
+    Area2Div1.style.border = "1px solid black"
+    Area2Div1.textContent = "Area2Div1";
+    Area2Div1.style.width = "50vw";
+    Area2Div1.style.height = "50vh";
+    Area2.appendChild(Area2Div1); //area1에 종속
 
-    const div2 = document.createElement("div"); // Area1
-    div2.style.backgroundColor = "yellow";
-    div2.style.border = "1px solid black"
-    div2.textContent = "Area2";
-    div2.style.width = "50vw";
-    div2.style.height = "50vh";
-    area1.appendChild(div2); //area1에 종속
-
-    const div3 = document.createElement("div"); // Area1
-    div3.style.backgroundColor = "yellow";
-    div3.style.border = "1px solid black"
-    div3.textContent = "Area2";
-    div3.style.width = "50vw";
-    div3.style.height = "50vh";
-    area1.appendChild(div2); //area1에 종속
-
-    ////////////////ver 0.0.2///////////////////////////
-
-  
-
-
+    const Area2Div2 = document.createElement("div");
+    Area2Div2.style.backgroundColor = "gray";
+    Area2Div2.style.border = "1px solid black"
+    Area2Div2.textContent = "Area2Div2";
+    Area2Div2.style.width = "50vw";
+    Area2Div2.style.height = "50vh";
+    Area2.appendChild(Area2Div2); //area1에 종속
+    
 
   </script>
 
