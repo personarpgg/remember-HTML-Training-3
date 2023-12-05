@@ -6,6 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    a{
+
+    }
+
+  </style>
+
 </head>
 
 <body>
@@ -23,10 +31,6 @@
     area1.style.display = "flex";
     root.appendChild(area1);
 
-    const area2 = document.createElement("div"); //rightArea : 오르쪽 컨테이너
-    area2.style.dipslay = "flex";
-    
-
     const div1 = document.createElement("div"); // Area1
     div1.style.backgroundColor = "green";
     div1.style.border = "1px solid black"
@@ -35,6 +39,10 @@
     div1.style.height = "100vh";
     area1.appendChild(div1); //area1에 종속
     
+    const area2 = document.createElement("div"); //rightArea : 오르쪽 컨테이너
+    area2.style.dipslay = "flex";
+    // area2.flexDirection = "column";
+
     const div2 = document.createElement("div"); // Area1
     div2.style.backgroundColor = "yellow";
     div2.style.border = "1px solid black"
@@ -43,16 +51,17 @@
     div2.style.height = "50vh";
     area1.appendChild(div2); //area1에 종속
 
+    const div3 = document.createElement("div"); // Area1
+    div3.style.backgroundColor = "yellow";
+    div3.style.border = "1px solid black"
+    div3.textContent = "Area2";
+    div3.style.width = "50vw";
+    div3.style.height = "50vh";
+    area1.appendChild(div2); //area1에 종속
 
     ////////////////ver 0.0.2///////////////////////////
 
-    /*
-    const div3 = document.createElement("div"); // Area3
-    div3.style.backgroundColor = "green";
-    div3.style.border = "1px solid black"
-    div3  .textContent = "Area3";
-    root.appendChild(div3);
-    */
+  
 
 
 
