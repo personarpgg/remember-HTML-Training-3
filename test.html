@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // HTML 요소 동적 생성
+        var htmlElement = document.createElement("html");
+        var headElement = document.createElement("head");
+        var titleElement = document.createElement("title");
+        var bodyElement = document.createElement("body");
+        var h1Element = document.createElement("h1");
+        var pElement = document.createElement("p");
+
+        // 텍스트 노드 생성
+        var titleText = document.createTextNode("동적으로 생성된 HTML");
+        var h1Text = document.createTextNode("안녕하세요!");
+        var pText = document.createTextNode("이것은 동적으로 생성된 HTML입니다.");
+
+        // 생성한 요소에 텍스트 노드 추가
+        titleElement.appendChild(titleText);
+        h1Element.appendChild(h1Text);
+        pElement.appendChild(pText);
+
+        // head에 title 추가
+        headElement.appendChild(titleElement);
+
+        // body에 h1과 p 추가
+        bodyElement.appendChild(h1Element);
+        bodyElement.appendChild(pElement);
+
+        // html에 head와 body 추가
+        htmlElement.appendChild(headElement);
+        htmlElement.appendChild(bodyElement);
+
+        // 문서에 생성한 HTML 요소 추가
+        document.documentElement.replaceWith(htmlElement);
+    </script>
+
+</body>
+
+</html>
