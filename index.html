@@ -86,8 +86,6 @@
     Area2Div.style.height = "70vh";
     Area2.appendChild(Area2Div); //area2에 종속
 
-
-
     const Area2Title = document.createElement("div");
     Area2Title.style.backgroundColor = "white";
     Area2Title.style.border = "1px solid black"
@@ -114,8 +112,6 @@
     Area2Text2.style.height = "10vh";
     Area2Div.appendChild(Area2Text2); //area2Div에 종속
 
-
-
     //----------------------------- Area3--------------------------//
 
     const Area3 = document.createElement("div");
@@ -124,8 +120,35 @@
     Area3.textContent = "Area3";
     Area3.style.width = "60vw";
     Area3.style.height = "30vh";
+    Area3.style.display = "flex";
     Area2.appendChild(Area3); //area2에 종속
-    
+
+
+    const Area3Obj1 = document.createElement("div");
+    Area3Obj1.style.backgroundColor = "red";
+    Area3Obj1.style.border = "1px solid black"
+    Area3Obj1.textContent = `A`;
+    Area3Obj1.style.width = "10vw";
+    Area3Obj1.style.height = "10vh";
+    Area3.appendChild(Area3Obj1); //area2Div에 종속
+
+    const Area3Obj2 = document.createElement("div");
+    Area3Obj2.style.backgroundColor = "yellow";
+    Area3Obj2.style.border = "1px solid black"
+    Area3Obj2.textContent = `B`;
+    Area3Obj2.style.width = "10vw";
+    Area3Obj2.style.height = "10vh";
+    Area3.appendChild(Area3Obj2); //area2Div에 종속
+
+    const Area3Obj3 = document.createElement("div");
+    Area3Obj3.style.backgroundColor = "green";
+    Area3Obj3.style.border = "1px solid black"
+    Area3Obj3.textContent = `C`;
+    Area3Obj3.style.width = "10vw";
+    Area3Obj3.style.height = "10vh";
+    Area3.appendChild(Area3Obj3); //area2Div에 종속
+
+
 
   </script>
 
